@@ -1,0 +1,2 @@
+#!/bvin/bash
+gcc $CFILE -S
