@@ -1,20 +1,25 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * _strchr - prints buffer in hexa
+ * _strspn - prints buffer in hexa
  * @s: buffer
- * @c: buffer2
+ * @accept: buffer2
  *
  * Return: Nothing.
  */
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-	while (*s != c)
+	unsigned int j, i;
+
+	for (j = 0; s[j] != '\0'; j++)
 	{
-		if (!*s++)
+		for (i = 0; accept[i] != '\0'; i++)
 		{
-			return (0);
+			if (s[j] == accept[i])
+				break;
 		}
+		if (!(accept[i]))
+			break;
 	}
-		return (s);
+	return (j);
 }
