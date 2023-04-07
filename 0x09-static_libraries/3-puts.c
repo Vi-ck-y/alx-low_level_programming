@@ -1,14 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - Prints quote
+ * _puts - Write a function that prints a string, followed by a new line, to
+ * stdout.
  *
- * Return: zero on success
+ * @str: This is my input string
  *
  */
-int main(void)
+
+void _puts(char *str)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	int index;
+
+	for (index = 0; str[index] != '\0'; index++)
+	{
+		_putchar(str[index]);
+	}
+	_putchar('\n');
 }
